@@ -751,7 +751,7 @@ To move subjects, send your message again, otherwise join the game using the lin
         for instance in self.instances.values():
             if user_email in instance.players:
                 return instance.game_id
-        for game_id in self.invites.keys():
+        for game_id in self.invites:
             players = self.get_players(game_id)
             if user_email in players:
                 return game_id
